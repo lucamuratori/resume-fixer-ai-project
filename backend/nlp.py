@@ -7,4 +7,3 @@ def get_match_score(resume_text, job_description):
     vectors = vectorizer.fit_transform([resume_text, job_description])
     score = cosine_similarity(vectors[0], vectors[1])[0][0]
     return round(score * 100, 2)
-

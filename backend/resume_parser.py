@@ -13,6 +13,3 @@ def extract_pdf(path):
 def extract_docx(path):
     doc = docx.Document(path)
     return "\n".join([p.text for p in doc.paragraphs if p.text.strip()])
-
-print(extract_pdf("./data/lorem-ipsum.pdf"))
-print("Docx file content:", extract_docx("./data/test.docx"))
